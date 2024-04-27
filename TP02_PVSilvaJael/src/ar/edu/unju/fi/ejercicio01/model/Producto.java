@@ -1,8 +1,5 @@
 package ar.edu.unju.fi.ejercicio01.model;
 
-import ar.edu.unju.fi.ejercicio01.model.Producto.Categoria;
-import ar.edu.unju.fi.ejercicio01.model.Producto.OrigenFabricacion;
-
 public class Producto {
 	private String codigo;
 	private String descripcion;
@@ -36,7 +33,7 @@ public class Producto {
 	public double getPrecioU() {
 		return precioU;
 	}
-	public void setPrecioUnitario(double precioU) {
+	public void setPrecioU(double precioU) {
 		this.precioU = precioU;
 	}
 	public OrigenFabricacion getOrigenFab() {
