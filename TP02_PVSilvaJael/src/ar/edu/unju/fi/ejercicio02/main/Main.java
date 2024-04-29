@@ -56,7 +56,7 @@ public class Main {
             } catch (Exception e) {
                 System.out.println("Ocurrió un error inesperado. Motivo: " + e.getMessage());
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
 
         scanner.close();
 	}
@@ -147,12 +147,9 @@ public class Main {
 	                   		efemeride.setMes(Mes.values()[mes-1]);	                  
 	                    break;
 	                   	case 2:
-	                   		int dia=0;
-	            	        do {
-	            	        	System.out.print("Nuevo dia de la efemeride: ");
-	            	        	dia = scanner.nextInt();
-	            	        	scanner.nextLine();
-	            	        }while (dia <0 || dia>31);
+	                   		System.out.print("Nuevo dia de la efemeride: ");	              
+	            	        efemeride.setDia(scanner.nextInt());	
+	            	        
 	                   		scanner.nextLine();
 	                    break;
 	                   	case 3:
@@ -163,6 +160,7 @@ public class Main {
 	                   		System.out.println("Opción no válida. Intente nuevamente.");
 	                   		
 	           		}
+	            	System.out.println("Efemeride modificada correctamente.");
 	            } catch (InputMismatchException e) {
 	           		System.out.println("Error: Debe ingresar un número entero.");
 	           		scanner.nextLine(); 
